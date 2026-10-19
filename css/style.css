@@ -13,6 +13,29 @@
     color: var(--main-color);
 }
 
+.logo {
+    width: 60px;
+    height:19px;
+    margin: 30px 50px 30px 50px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#menu {
+    display: flex;
+    gap: 68px;
+    list-style: none;
+}
+
+#menu a:hover {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+
 body {
     display: flex;
     justify-content: center;
