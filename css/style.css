@@ -49,7 +49,61 @@
 .headline h2, .headline p {
     margin: 0px;
 }
+/*fin headline*/
 
+/*search-bar ajouté*/
+.search-bar .fa-location-dot {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+    width: 50px;
+    /*prend en compte le padding pour avoir une largeur de 50 au total*/
+    box-sizing: border-box;
+    /*Flex-shrink: 0 permet a l'élément de garder sa largeur de base et ne rétrécit pas*/
+    flex-shrink: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    margin: 24px 0px 24px 0px;
+}
+
+.search-bar form {
+    display: flex;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    height: 49px;
+    width: 377px;
+    box-sizing: border-box;
+}
+
+.search-input {
+    /* étiré horrizontalement la zone de recherche pour prendre tout l'espace disponible */
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    box-sizing: border-box;
+}
+
+.search-button {
+    background-color:#0065FC;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 132px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+/*fin search-bar*/
 
 body {
     display: flex;
