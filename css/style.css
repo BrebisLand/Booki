@@ -317,6 +317,40 @@ a {
     margin-bottom: 5px;
 }
 
+/*Ajout Activités*/
+.activity {
+    margin: 65px 30px 30px 30px;
+}
+
+.activity h2 {
+    margin-bottom: 30px;
+}
+
+.activity-card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.activity .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.activity-card img {
+    width: 297px;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activity .card-content {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 19px 20px 19px;
+}
+
 
 
 
