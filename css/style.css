@@ -34,8 +34,8 @@
 }
 
 #menu a:hover {
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
 }
 /*fin header*/
 
@@ -73,7 +73,7 @@
 
 .search-bar form {
     display: flex;
-    background-color: #F2F2F2;
+    background-color: var(--main-bg-color);
     border-radius: 15px;
     height: 49px;
     width: 377px;
@@ -86,13 +86,13 @@
     font-weight: bold;
     font-size: 18px;
     border: none;
-    border-top: 1px solid #F2F2F2;
-    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
     box-sizing: border-box;
 }
 
 .search-button {
-    background-color:#0065FC;
+    background-color:var(--main-color);
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -131,7 +131,7 @@
 }
 
 .filter-button:hover {
-    background-color: #DEEBFF;
+    background-color: var(--filter-bg-color);
 }
 /*fin filter*/
 
@@ -349,6 +349,39 @@ a {
     font-size: 16px;
     font-weight: bold;
     margin: 20px 19px 20px 19px;
+}
+/* Fin activités*/
+
+/*Ajout footer*/
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 163px;
+    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+}
+
+.footer-column {
+    width: 446px;
+    height: 163px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.footer-link {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0px;
+}
+
+.footer-container h3 {
+    margin-top: 0px;
+
 }
 
 
