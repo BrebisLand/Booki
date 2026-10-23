@@ -13,6 +13,151 @@
     color: var(--main-color);
 }
 
+/* header ajouté */
+.logo {
+    width: 60px;
+    height:19px;
+    margin: 30px 0px 30px 0px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#menu {
+    display: flex;
+    gap: 68px;
+    list-style: none;
+}
+
+#menu a:hover {
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
+}
+/*fin header*/
+
+/* headline ajouté */
+.headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.headline h2, .headline p {
+    margin: 0px;
+}
+/*fin headline*/
+
+/*search-bar ajouté*/
+.search-bar .fa-location-dot {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+    width: 50px;
+    /*prend en compte le padding pour avoir une largeur de 50 au total*/
+    box-sizing: border-box;
+    /*Flex-shrink: 0 permet a l'élément de garder sa largeur de base et ne rétrécit pas*/
+    flex-shrink: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: stretch;
+    margin: 35px 0px 35px 0px;
+}
+
+.search-bar form {
+    display: flex;
+    background-color: var(--main-bg-color);
+    border-radius: 15px;
+    height: 49px;
+    width: 377px;
+    box-sizing: border-box;
+}
+
+.search-input {
+    /* étiré horrizontalement la zone de recherche pour prendre tout l'espace disponible */
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
+    box-sizing: border-box;
+}
+
+.search-button {
+    background-color:var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 132px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+/*fin search-bar*/
+
+/* filter ajouté */
+.filters {
+    display: flex;
+    gap: 15px;
+    width: 758px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #D9D9D9;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 4px 19px 4px 19px;
+    box-sizing: border-box;
+}
+
+.filter-button:hover {
+    background-color: var(--filter-bg-color);
+}
+/*fin filter*/
+
+/* infobar ajouté */
+.infobar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 24px;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.fa-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    font-size: 12px;
+}
+/*fin infobar*/
+
 body {
     display: flex;
     justify-content: center;
@@ -76,6 +221,57 @@ a {
     width: 65%;
 }
 
+.hebergements-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.hebergements-cards a {
+    display: flex;
+    width: 250px;
+    height: 207px;
+}
+
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 207px;
+    gap: 8px;
+}
+
+.hebergements-cards .card img {
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 15px 0px 15px;
+}
+
+.hebergements-cards .card-title {
+    margin: 0;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 8px 0px 8px 0px;
+}
+
+.see-more {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -119,6 +315,73 @@ a {
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
+}
+
+/*Ajout Activités*/
+.activity {
+    margin: 65px 30px 30px 30px;
+}
+
+.activity h2 {
+    margin-bottom: 30px;
+}
+
+.activity-card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.activity .card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.activity-card img {
+    width: 297px;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activity .card-content {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 19px 20px 19px;
+}
+/* Fin activités*/
+
+/*Ajout footer*/
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 163px;
+    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+}
+
+.footer-column {
+    width: 446px;
+    height: 163px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.footer-link {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0px;
+}
+
+.footer-container h3 {
+    margin-top: 0px;
+
 }
 
 
