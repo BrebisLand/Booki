@@ -46,8 +46,12 @@
     gap: 8px;
 }
 
-.headline h2, .headline p {
+.headline h1, .headline p {
     margin: 0px;
+}
+
+.headline h1 {
+    font-size: 22px;
 }
 /*fin headline*/
 
@@ -103,13 +107,17 @@
     box-sizing: border-box;
     flex-shrink: 0;
 }
+
+.search-button .button-icon {
+    display: none;
+}
 /*fin search-bar*/
 
 /* filter ajouté */
 .filters {
     display: flex;
     gap: 15px;
-    width: 758px;
+    width: 100%;
     height: 50px;
     font-size: 18px;
     font-weight: bold;
@@ -204,6 +212,21 @@ a {
 }
 
 /****** Hebergements And Populaires ***********/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    /*Pour les anciens navigateur : élément rogner de l'intérieur vers le centre, le rendant invisible*/
+    clip: rect(0, 0, 0, 0);
+    /*Meme principe que clip: mais pour les nouveaux navigateur. Ont rogne 50% sur tout les cotés de l'élément, il disparait donc.*/
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -238,7 +261,7 @@ a {
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 100%; 
     height: 207px;
     gap: 8px;
 }
@@ -326,6 +349,11 @@ a {
     margin-bottom: 30px;
 }
 
+.activity .card h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
 .activity-card {
     display: flex;
     flex-direction: row;
@@ -336,17 +364,22 @@ a {
     display: flex;
     flex-direction: column;
     padding: 0;
+    height: 439px;
 }
 
 .activity-card img {
-    width: 297px;
+    width: 100%;
     height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
+.activity-card a {
+    flex: 1;
+    min-width: 0;
+}
+
 .activity .card-content {
-    font-size: 16px;
     font-weight: bold;
     margin: 20px 19px 20px 19px;
 }
@@ -400,6 +433,10 @@ a {
         width: 100%;
     }
 
+    .hebergements-cards {
+        flex-direction: row;
+    }
+
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -422,9 +459,216 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .filters {
+        width: 100%;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .activity {
+        height: auto;
+    }
+
+    .activity-card {
+        width: 100%;
+        height: auto;
+        gap: 30px;
+    }
+
+    .activity .card {
+        height: 270px;
+    }
+
+    .activity-card a {
+        /*Demande aux 4 liens de partager équitablement l'espace avec le gap*/
+        flex: 1;
+        /*Leur permet de rétrécir si besoin*/
+        min-width: 0;
+    }
+
+    .activity img {
+        width: 100%;
+        min-height: 0;
+        object-fit: cover;
+        height: 200px;
+    }
+
+    .activity .card-content {
+        height: 70px;
+        margin: 0;
+        padding: 20px 19px;
+        box-sizing: border-box;
+        block-size: fit-content;
+    }
+
+    .activity .card-content p {
+        margin: 0;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    body {
+        margin: 0;
+    }
+
+    .top-line {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+
+    #menu {
+        padding: 0;
+        width: 100%;
+        gap: 0;
+    }
+
+    #menu a:hover {
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+        display: flex;
+    }
+
+    #menu a {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        column-gap: 15px;
+    }
+
+    #menu li {
+        /* partage l'espace disponible en part égal*/
+        flex: 1;
+    }
+
+    .headline {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-input {
+        /*Autorise le champ de recherche a rétrécir pour laisser la place aux être élément du bloc*/
+        min-width: 0;
+    }
+
+    .search-bar form {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 49px;
+        border-radius: 15px;
+    }
+
+    .search-button .button-text {
+        display: none;
+    }
+
+    .search-button .button-icon {
+        display: inline-block;
+        color: white;
+    }
+
+    .filters {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filters p {
+        width: 100%;
+        
+    }
+
+    .filter-button {
+        flex: 1;
+    }
+
+    .infobar {
+        height: auto;
+    }
+
+    .infobar p {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .populaires {
+        order: -1;
+        margin-top: 0;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .populaires-cards .card {
+        margin: 0;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    #hebergements {
+        background-color: white;
+    }
+
+    .hebergements a {
+        width: 100%;
+    }
+
+    .activity {
+        height: 965px;
+        margin: 30px;
+    }
+
+    .activity-card {
+        flex-direction: column;
+        height: 845px;
+    }
+
+    .activity img {
+        height: 141px;
+        object-fit: cover;
+    }
+
+    .activity .card {
+        height: 200px;
+    }
+
+    .activity .card-content {
+        height: 59px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        height: 461px;
+
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+    
+
 }
