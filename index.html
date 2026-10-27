@@ -30,17 +30,18 @@
         <main>
             <div class="top-line">
             <div class="headline">
-                <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre-ville ou en pleine nature</p>
             </div>
 
             <div class="search-bar">
                 <form>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input class="search-input" type="text" placeholder="Marseille, France">
-                    <button class ="search-button" type="submit">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <label class="sr-only" for="ville">Ville</label>
+                    <input id="ville" class="search-input" type="text" placeholder="Marseille, France">
+                    <button class ="search-button" type="submit" aria-label="Rechercher">
                         <span class="button-text">Rechercher</span>
-                        <i class="fa-solid fa-magnifying-glass button-icon"></i>
+                        <i class="fa-solid fa-magnifying-glass button-icon" aria-hidden="true"></i>
                     </button>
                 </form>
             </div>
@@ -62,7 +63,7 @@
             </div>
 
             <div class="infobar">
-                <i class="fa-solid fa-info"></i>
+                <i class="fa-solid fa-info" aria-hidden="true"></i>
                 <p>plus de 500 logements sont disponibles dans cette ville</p>
             </div>
             </div>
@@ -266,7 +267,7 @@
                             <article class="card">
                                 <img src="./images/activites/reno-laithienne.jpg" alt="Vieux Port">
                                 <div class="card-content">
-                                    <p>Vieux-Port</p>
+                                    <h3>Vieux-Port</h3>
                                 </div>
                             </article>
                         </a>
@@ -274,7 +275,7 @@
                             <article class="card">
                                 <img src="./images/activites/paul-hermann.jpg" alt="Fort de Pomègues">
                                 <div class="card-content">
-                                    <p>Fort de Pomègues</p>
+                                    <h3>Fort de Pomègues</h3>
                                 </div>
                             </article>
                         </a>
@@ -282,7 +283,7 @@
                             <article class="card">
                                 <img src="./images/activites/kilyan-sockalingum.jpg" alt="Parc national des Calanques">
                                 <div class="card-content">
-                                    <p>Parc national des Calanques</p>
+                                    <h3>Parc national des Calanques</h3>
                                 </div>
                             </article>
                         </a>
@@ -290,7 +291,7 @@
                             <article class="card">
                                 <img src="./images/activites/florian-wehde.jpg" alt="Notre-Dame-de-la-Garde">
                                 <div class="card-content">
-                                    <p>Notre-Dame-de-la-Garde</p>
+                                    <h3>Notre-Dame-de-la-Garde</h3>
                                 </div>
                             </article>
                         </a>
