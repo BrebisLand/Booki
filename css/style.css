@@ -437,6 +437,21 @@ a {
         flex-direction: row;
     }
 
+    .hebergements-cards a {
+        /*0 0 indique a flexbox de ne pas agrandir ni rétrécir les liens*/
+        /*33.333% correspond a un tier de la largeur disponible pour les cards*/
+        /*ex : largeur intérieur de hebergements-cards de 900px avec gap de 30px, il y a 2 gap
+        pour 3 cards donc on a 60px de gap. 900 - 60 = 840. Chaque cards doit donc mesurer
+        840 / 3 = 280px. Or un tier de 900 = 300, on retire donc 20px a 300 pour arriver a 280
+        d'ou les "- 20px"*/
+        flex: 0 0 calc(33.333% - 20px);
+        height: auto;
+    }
+
+    .hebergements-cards .card {
+        height: auto;
+    }
+
     .populaires {
         width: 100%;
         margin-top: 50px;
