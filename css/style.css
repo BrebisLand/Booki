@@ -460,6 +460,7 @@ a {
         d'ou les "- 20px"*/
         flex: 0 0 calc(33.333% - 20px);
         height: auto;
+        min-width: 0;
     }
 
     .hebergements-cards .card {
@@ -657,9 +658,14 @@ a {
 
     #hebergements {
         background-color: white;
+        padding: 20px;
     }
 
-    .hebergements a {
+    .hebergements-cards {
+        flex-direction: column;
+    }
+
+    .hebergements-cards a {
         width: 100%;
     }
 
@@ -675,7 +681,6 @@ a {
 
     .activity img {
         height: 141px;
-        object-fit: cover;
     }
 
     .activity .card {
