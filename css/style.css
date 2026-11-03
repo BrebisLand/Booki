@@ -25,8 +25,10 @@ body {
 }
 
 .navigation {
+    /* mise en place de flexbox qui permet d'organiser, d'aligner et de répartir des éléments dans un conteneur*/
     display: flex;
     justify-content: space-between;
+    /*ici stretch sert à étirer les éléments sur l'axe secondaire(ici column) pour occuper tout l'espace disponible*/
     align-items: stretch;
     margin-bottom: 50px;
 }
@@ -34,12 +36,14 @@ body {
 #menu {
     display: flex;
     gap: 68px;
+    /*list-style: none pour supprimer les puces de notre liste a puces*/
     list-style: none;
     margin: 0;
 }
 
 #menu a {
     display: flex;
+    /*on centre les liens de navigation au centre du conteneur*/
     align-items: center;
 }
 
@@ -49,6 +53,7 @@ body {
 
 #menu a:hover {
     color: var(--main-color);
+    /*solid sert a faire un trait plein et continue pour la bordure*/
     border-top: 2px solid var(--main-color);
 }
 /*fin header*/
@@ -210,6 +215,7 @@ a {
 }
 
 .card img {
+    /*permet de remplir le conteneur de l'image sans la déformer, en recadrant et en la rognant si nécessaire*/
     object-fit: cover;
 }
 
@@ -227,11 +233,13 @@ a {
 
 /****** Hebergements And Populaires ***********/
 .sr-only {
+    /*retire un élément du flux normal pour qu'il ne prenne pas de place dans la mise en page*/
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
+    /*masque le contenu qui dépasse d'un élément.*/
     overflow: hidden;
     /*Pour les anciens navigateur : élément rogner de l'intérieur vers le centre, le rendant invisible*/
     clip: rect(0, 0, 0, 0);
@@ -261,6 +269,7 @@ a {
 .hebergements-cards {
     display: flex;
     flex-direction: row;
+    /*wrap permet que les éléments puisse passer a la ligne quand il n'y a pas assez de place sur une seule ligne*/
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
@@ -389,7 +398,9 @@ a {
 }
 
 .activity-card a {
+    /*Demande aux 4 liens de partager équitablement l'espace avec le gap*/
     flex: 1;
+    /*Leur permet de rétrécir si besoin*/
     min-width: 0;
 }
 
@@ -519,6 +530,7 @@ a {
 
     .activity img {
         width: 100%;
+        /*autorise un élément à réduire sa hauteur en dessous de la taille minimale imposée par son contenu*/
         min-height: 0;
         object-fit: cover;
         height: 200px;
@@ -529,6 +541,7 @@ a {
         margin: 0;
         padding: 20px 19px;
         box-sizing: border-box;
+        /*adapte la taille de l'élément à son contenu, en ajustant sa largeur et sa hauteur en fonction de la taille du contenu qu'il contient*/
         block-size: fit-content;
     }
 
@@ -608,6 +621,7 @@ a {
     }
 
     .search-button .button-icon {
+        /*permet a l'élément de conserver ses propriétés et de rester en ligne*/
         display: inline-block;
         color: white;
     }

@@ -36,9 +36,13 @@
 
             <div class="search-bar">
                 <form>
+                    <!--utilisation de aria-hidden="true" pour cacher l'icone aux lecteurs d'écran, car elle est simplement décorative.-->
                     <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <!--utilisation de la balise label avec for="ville" ratacher a son id dans le input. Permet d'associer une étiquette descriptive au formulaire pour amélioré l'accésibilité au lecteur d'écran-->
+                    <!--utilisation de la classe sr-only pour cacher le texte a l'écran mais la laisser disponible pour les lecteurs d'écrans-->
                     <label class="sr-only" for="ville">Ville</label>
                     <input id="ville" class="search-input" type="text" placeholder="Marseille, France">
+                    <!-- aria-label="rechercher" donne un nom a l'élément pour les lecteurs d'écrans-->
                     <button class ="search-button" type="submit" aria-label="Rechercher">
                         <span class="button-text">Rechercher</span>
                         <i class="fa-solid fa-magnifying-glass button-icon" aria-hidden="true"></i>
@@ -48,6 +52,7 @@
 
             <div class="filters">
                 <p>Filtres</p>
+                <!--type="button" ne soumet pas de formulaire quand on clique sur le bouton contrairement a type="submit"-->
                 <button type="button" class="filter-button">
                    <i class="fa-solid fa-money-bill-wave icone-filter" aria-hidden="true"></i>Économique
                 </button>
